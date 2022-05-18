@@ -24,7 +24,7 @@ public class ScreenLockinPatternTest {
    *
    */
   public ScreenLockinPatternTest() {
-  };
+  }
 
 
   @Test
@@ -50,5 +50,12 @@ public class ScreenLockinPatternTest {
     Future<Integer> count  = new ScreenLockinPattern().countPatternsFrom(1, 2);
     Integer result = count.get(10, TimeUnit.SECONDS);
     assertEquals(result.intValue(), 5);
+  }
+
+  @Test
+  public void ScreenLockinPatternTestFirst1Length0Test()  throws InterruptedException, ExecutionException, TimeoutException {
+    Future<Integer> count  = new ScreenLockinPattern().countPatternsFrom(1, 0);
+    Integer result = count.get(10, TimeUnit.SECONDS);
+    assertEquals(result.intValue(), 0);
   }
 }
