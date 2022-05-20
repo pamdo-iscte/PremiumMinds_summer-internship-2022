@@ -35,6 +35,7 @@ class ScreenLockinPattern implements IScreenLockinPattern {
         hasToPassOver.put(9, new int[]{3, 6, 1, 5, 7, 8});
 
     }
+
  /**
   * Method to count patterns from firstPoint with the length
   * @param firstPoint initial matrix position
